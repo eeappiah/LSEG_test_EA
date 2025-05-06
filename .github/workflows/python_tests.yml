@@ -1,0 +1,22 @@
+name: Python Assert Tests
+
+on:
+  push:
+    branches:
+      - '**'         
+  pull_request:
+    branches:
+      - main           
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    container:
+      image: python:3.10-slim
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Running tests for python code
+        run: |
+            python main.py
+
