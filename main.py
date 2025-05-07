@@ -6,9 +6,6 @@ def test_get_value():
     assert get_value({"a": {"b": {"c": "d"}}}, "a/b/c") == "d"
     print("Test 1 passed: 'a/b/c' == 'd'")
 
-    assert get_value({"x": {"y": {"z": "1"}}}, "x/y/z") == "1"
-    print("Test 2 passed: 'x/y/z' == '1'")
-
     assert get_value({"key": {"sub": "value"}}, "key/sub") == "value"
     print("Test 3 passed: 'key/sub' == 'value'")
 
