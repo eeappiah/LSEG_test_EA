@@ -12,9 +12,6 @@ def test_get_value():
     assert get_value({"key": {"sub": "value"}}, "key/sub") == "value"
     print("Test 3 passed: 'key/sub' == 'value'")
 
-    assert get_value({"a": {"b": {"c": "d"}}}, "a/b/c") == "d"
-    print("Test 4 passed: 'a/b/c' == 'd' (duplicate test)")
-
     assert get_value({"x": {"y": {"z": "a"}}}, "x/y/z") == "a"
     print("Test 5 passed: 'x/y/z' == 'a'")
 
